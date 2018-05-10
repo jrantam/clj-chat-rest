@@ -16,8 +16,7 @@ Additional information for Windows installation:
 ## Running
 
 1. Start server by calling "lein ring server".
-
-2. Send few POST requests to url "localhost:3000/messages", and receive "201 CREATED". POST request body format:
+2. Send few POST requests to url "localhost:3000/messages", and receive "201 CREATED". Requests must contain "application/json" body in the following format:
 ```
 {
 "sender" : "Mike",

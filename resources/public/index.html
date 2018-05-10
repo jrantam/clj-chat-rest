@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clojure Chat REST</title>
+</head>
+<body>
+
+<div>
+<div><strong>Clojure Chat REST (clj-chat-rest) </strong></div>
+<div>&nbsp;</div>
+<div>A simple prototype REST project that introduces e.g. Clojure, H2 in-memory database and JSON usage.</div>
+<div>&nbsp;</div>
+<div>Currently there is no frontend implementation for this chat service, but message sending can be done using e.g. Postman (https://www.getpostman.com/) or any other HTTP request poster.</div>
+<br />
+<div><strong>Prerequisites</strong></div>
+<br />
+<div>Install Leiningen 2.0.0 or above.</div>
+<div>Check installation instructions at: https://leiningen.org/#install</div>
+<div>Additional information for Windows installation:</div>
+<ul>
+<li>Download "leiningen-2.8.1-standalone.zip" and rename it as .jar file</li>
+<li>Set jar into folder C:\Users\xxx\.lein\self-installs\</li>
+<li>Make sure you have set "lein.bat" in PATH.</li>
+</ul>
+<br />
+<div><strong>Running</strong></div>
+<br />
+<div>1. Start server by calling "lein ring server".</div>
+<br />
+<div>2. Send few POST requests to url "localhost:3000/messages", and receive "201 CREATED".</div>
+<br />
+<div>POST request body format:</div>
+<div>{</div>
+<div>"sender" : "Mike",</div>
+<div>"room" : "1408",</div>
+<div>"message" : "Hello!"</div>
+<div>}</div>
+<br />
+<div>3. Send GET request to "localhost:3000/messages" and receive messages from ALL rooms.</div>
+<div>4. Send GET request to "localhost:3000/messages/1408" and receive messages ONLY from room "1408".</div>
+<br />
+<div><span style="color: #339966;"><em>Have a nice chat! :)</em></span></div>
+</div>
+
+</body>
+</html>
